@@ -1,10 +1,28 @@
-/*
-Create a basic markdown editor in Next.js with the following features:
-- Use react hooks
-- Create a state for markdown with the default text "type markdown here"
-- A text area where users can write markdown 
-- Show a live preview of the markdown text as I type
-- Support for basic markdown syntax like headers, bold, and italics 
-- Use React markdown npm package 
-- The markdown text and resulting HTML should be saved in the component's state and updated in real-time 
-*/
+const data = [
+  [
+    { name: 'John', age: 25 },
+    { name: 'Jane', age: 30 }
+  ],
+  [
+    { name: 'Bob', age: 40 }
+  ]
+];
+
+const transformedData = data.map(arr => arr.map(obj => {
+  return {
+    ...obj,
+    age: obj.age * 2 // Example transformation: doubling the age
+  };
+}));
+
+console.log(transformedData);
+// Output: [
+//   [
+//     { name: 'John', age: 50 },
+//     { name: 'Jane', age: 60 }
+//   ],
+//   [
+//     { name: 'Bob', age: 80 }
+//   ]
+// ]
+ 
